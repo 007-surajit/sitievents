@@ -1,0 +1,14 @@
+<ion-view view-title="Vote Results">  
+  <ion-nav-buttons side="right"></ion-nav-buttons>    
+  <ion-content class="text-center" has-header="true" id="votes">    
+    <!-- <p class="text-left info-header"><strong>Order History</strong></p> -->
+    <div class="list" ng-repeat="result in results">
+       <a class="item item-icon-left text-left" href="javascript:void(0)">
+        <i class="icon ion-arrow-right-b"></i>
+        <h2><b>{{result.PujaName}}</b></h2>       
+        <p>Votes : {{ result.TotalVotes }}</p>        
+      </a>      
+    </div>
+  </ion-content>   
+</ion-view>
+

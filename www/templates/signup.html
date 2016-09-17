@@ -1,0 +1,52 @@
+<!--
+  #TIP: in this case we hide the navbar provided by navigation system.
+-->
+<ion-view view-title="Signup">
+
+  <!-- <ion-header-bar class="bar bar-deepblue bar-deepblue-borderbottom">
+    <button ui-sref="start" class="button button-clear button-deepblue-white"><i class="white-color ion-arrow-left-c"></i></button>
+    <h2 class="title">Signup</h2>
+  </ion-header-bar> -->
+  <ion-nav-bar class="bar-positive">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+  </ion-nav-bar>
+
+  <ion-content class="has-header has-footer padding full-height text-center">
+
+    <div class="signupHeader">        
+        <button class="button button-positive logo"></button> 
+    </div>
+    
+    <h3 class="sans-pro-light">Please provide this information</h3>
+
+    <label class="item item-input">
+        <input type="text" placeholder="Your name" ng-model="user.name">
+    </label>
+    <label class="item item-input">
+        <input type="text" placeholder="email" ng-model="user.email">
+    </label>
+    <label class="item item-input">
+        <input type="text" placeholder="phone" ng-model="user.phone">
+    </label>
+    <label class="item item-input">
+        <input type="password" placeholder="password" ng-model="user.password">
+    </label>
+    <label class="item item-input">
+        <input type="password" placeholder="repeat password">
+    </label>
+
+    <!--
+      #NOT-IMPLEMENTED:
+      the button does nothing, implementation is up to you!
+    -->
+    <button class="button button-block button-energized" ng-click="signup(user)">SIGNUP</button>
+    
+  </ion-content>
+
+  <!-- we provide a link back to login in footer bar -->
+  <ion-footer-bar class="bar bar-positive bar-deepblue-bordertop pointer" ui-sref="login">
+    <h1 class="title sans-pro-light">Login</h1>
+  </ion-footer-bar>
+
+</ion-view>

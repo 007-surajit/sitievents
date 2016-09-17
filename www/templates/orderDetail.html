@@ -1,0 +1,19 @@
+<ion-view view-title="Order Detail"> 
+<ion-nav-buttons side="right"></ion-nav-buttons>   
+  <ion-content class="padding text-center" has-header="true">    
+    <div class="list" ng-repeat="order in orderDetail">
+       <a ng-show="order.isPuja" class="item item-icon-left text-left" href="#" ui-sref="app.viewPass({productId: order.ProductID, quantity: order.Quantity})">
+	    <i class="icon ion-arrow-right-b"></i>	    
+      	<p>Puja Name : {{ order.PujaName }}</p>
+	    <p>Order Total : {{ order.Product_Price | currency:'Rs. ' }}</p>
+	    <p>Quantity: {{ order.Quantity }}</p>
+	  </a>	       
+	  <a ng-show="order.isPackage" class="item item-icon-left text-left" href="#" ui-sref="app.viewPackagePass({packageId: order.ProductID, quantity: order.Quantity})">
+	    <i class="icon ion-arrow-right-b"></i>	    
+      	<p>Package Name : {{ order.PackageName }}</p>
+	    <p>Order Total : {{ order.Product_Price | currency:'Rs. ' }}</p>
+	    <p>Quantity: {{ order.Quantity }}</p>
+	  </a>
+    </div>
+  </ion-content>   
+</ion-view>

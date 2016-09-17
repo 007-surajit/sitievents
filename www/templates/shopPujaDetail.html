@@ -1,0 +1,27 @@
+<ion-view view-title="Puja Detail">
+
+    <!-- <ion-nav-buttons side="right">
+    <span ui-sref="app.cart">
+      <button class="button button-clear icon ion-android-cart white-color">
+        
+      </button>
+      <span ng-show="cart.products.length" class="cart-badge ng-hide">{{cart.products.length}}</span>
+    </span>
+    </ion-nav-buttons> -->
+
+  <ion-content has-footer="false" id="test">
+      
+         <div class="item item-avatar" style="padding-left:60px">
+            <img ng-src="{{product.PujaImageURL}}">
+            <h2>{{product.PujaName}}</h2>
+            <h3 style="white-space:normal">{{product.PujaFeatures}}</h3>
+         </div>
+
+         <div class="item item-image" style="position:relative;">
+         <img class="full-image" ng-src="{{product.PujaImageURL}}">
+       </div>
+         <div class="padding positive" style="font-size:1.1em;font-weight:bold">{{product.PujaDescription}}</div>
+        <div id="map" data-tap-disabled="true"></div>
+    
+  </ion-content>
+</ion-view>

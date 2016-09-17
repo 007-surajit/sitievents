@@ -1,0 +1,74 @@
+<ion-view view-title="Home">   
+
+  <ion-nav-buttons side="right">
+        <span class="imageBtn">        
+          <img src="img/drawable-mdpi-icon.png" />        
+        </span>
+      </ion-nav-buttons>
+  <!-- <ion-nav-buttons side="right">
+        <span ui-sref="app.cart">
+          <button class="button button-clear icon ion-android-cart white-color">
+            
+          </button>
+          <span ng-show="cart.products.length" class="cart-badge ng-hide">{{cart.products.length}}</span>
+        </span>
+      </ion-nav-buttons> -->
+      
+  <ion-content id="productList" class="text-center">
+
+  <!--<div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHQ2q7k8c4fLQmssFPK5I_6UfqT2mcl_Y&callback=initMap"
+    async defer></script>
+
+    <!-- <ion-item href="#/app/puja/list">
+        <div class="item item-avatar">
+          <img src="img/durgapuja.jpg">
+          <h2>Browse All Puja</h2>
+          <p>Tap here</p>
+        </div>
+
+        <div class="item item-image">
+            <img src="img/durgapuja.jpg">
+        </div>
+    </ion-item>
+        
+
+    <ion-item href="#/app/package/list">
+      <div class="item item-avatar">
+            <img src="img/puja_package.jpg">
+            <h2>Browse All Packages</h2>
+            <p>Tap here</p>
+      </div>    
+
+      <div class="item item-image">
+          <img src="img/puja_package.jpg">
+      </div>
+    </ion-item> -->
+    
+      <div style="height:55%">
+      <img src="img/durgaface.jpg" style="width:100%;margin-top:5px">
+        <!-- <button class="button button-positive logo"></button>  -->
+       
+       <h1 class="sans-pro-light header energized">Vote for Kolkata's top 24 Pujas</h3>
+       </div>
+        <div class="homeContent">
+          <div class="inner" >
+          <button class="button button-big button-positive" ui-sref="app.pujaList">View Puja Details</button>
+        </div>
+        <!-- <button class="button button-clear"></button>
+        <button class="button button-big button-red" ui-sref="app.packageList">VIP Pass Packages</button>        -->
+     </div>    
+  </ion-content>
+  <ion-footer-bar class="bar bar-energized" style="display: flex;justify-content: center;" ui-sref="login">
+    <h1 class="footer-title"><marquee>{{footerText}}</marquee></h1>
+  </ion-footer-bar>
+</ion-view>

@@ -1,0 +1,57 @@
+<!--
+  #TIP: in this case we hide the navbar provided by navigation system.
+-->
+<ion-view view-title="Login">
+  
+  <!-- in our custom header bar we give a link to start screen -->
+  <!-- <ion-header-bar class="bar bar-deepblue bar-deepblue-borderbottom">
+    <button ui-sref="start" class="button button-clear button-deepblue-white"><i class="white-color ion-arrow-left-c"></i></button>
+    <h2 class="title">Login</h2>
+  </ion-header-bar> -->
+  <ion-nav-bar class="bar-positive">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+  </ion-nav-bar>
+
+
+  <ion-content class="has-header has-footer padding-topside full-height text-center">
+
+    
+    <div class="loginHeader">
+        <img src="img/172596980.jpg" style="width:100%">
+        <button class="button button-positive logo"></button> 
+    </div>
+     <div class="loginContent">
+        <h3 class="sans-pro-light">Please sign in</h3>
+        <form name="loginForm" novalidate class="simple-form">
+          <label class="item item-input">
+              <i class="icon ion-email placeholder-icon"></i>
+              <input type="text" placeholder="email" ng-model="user.email">
+          </label>
+          <label class="item item-input">
+              <i class="icon ion-locked placeholder-icon"></i>
+              <input type="password" placeholder="password" ng-model="user.password">
+          </label>    
+          <!--
+            #SIMPLIFIED-IMPLEMENTATION:
+            login just sets an user! (see controllers.js for more)
+          -->
+          <div class="row"> 
+           <!--  <div class="col col-50">
+            <button class="button button-inline facebook-sign-in" ng-click="facebookSignIn()"></button>
+          </div> -->
+          <div class="col">
+            <button class="button button-inline button-positive" ng-click="login(user)">LOGIN</button>        
+          </div>          
+          
+        </div>
+        </form>
+     </div>
+  </ion-content>
+
+  <!-- we put the forgot password link in the footer -->
+  <ion-footer-bar class="bar bar-positive bar-deepblue-bordertop pointer" ui-sref="forgot">
+    <h1 class="title sans-pro-light">Forgot password?</h1>
+  </ion-footer-bar>
+
+</ion-view>
