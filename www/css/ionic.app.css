@@ -10115,13 +10115,13 @@ h3, .h3 {
   width: 100%;
   flex: 1; }
 
+.scroll {
+  height: 100%; }
+
 #test .scroll {
   display: flex;
   flex-flow: column; }
 
-/* .scroll {
-    height: 100%;
-} */
 #productList .item-content {
   padding: 0; }
 
