@@ -179,6 +179,9 @@ angular.module('durgaPuja', ['ionic', 'ngCordova', 'durgaPuja.controllers', 'dur
 
   // Disable view caching
   //$ionicConfigProvider.views.maxCache(0);
+
+  $ionicConfigProvider.backButton.text('').icon('ion-chevron-left');
+  $ionicConfigProvider.backButton.previousTitleText(false);
   
   $stateProvider
 
