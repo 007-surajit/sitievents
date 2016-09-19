@@ -9986,7 +9986,7 @@ a.button {
     background: #ffffff;
     color: #376484; }
   .deepblue-theme .button-medium {
-    font-size: 18px;
+    font-size: 16px;
     border-radius: 8px; }
   .deepblue-theme .icon-text {
     font-size: 27px; }
@@ -10017,7 +10017,7 @@ a.button {
   .deepblue-theme h1.pujaFooter-title {
     color: #444;
     margin: 0 auto;
-    font-size: 1em;
+    font-size: 0.8em;
     align-self: center; }
   .deepblue-theme h1.pujaFooter-title.bannerText {
     line-height: 2em; }
@@ -10255,11 +10255,7 @@ span.price {
 
 span.feature {
   color: #444;
-  font-weight: 600;
-  font-family: "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif; }
-
-span.feature.pujaname {
-  font-size: 16px; }
+  font-weight: 600; }
 
 .spacing {
   height: 15px;
