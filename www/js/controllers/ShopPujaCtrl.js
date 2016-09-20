@@ -52,7 +52,7 @@ angular.module('durgaPuja.controllers')
         if (data.returnMessage === 'TRUE') {
            $ionicPopup.alert({
             title: 'Vote Puja.',
-            subTitle: 'Success.'
+            subTitle: 'Vote completed successfully.'
           }).then(function(res) {
                 $("#puja_"+id).prop("disabled",true);
            });

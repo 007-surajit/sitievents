@@ -298,6 +298,7 @@ angular.module('durgaPuja.controllers', [])
         BackendService.checkLogin(userObj)
            .then(function(data) {
                 if(data.returnMessage === 'TRUE'){
+                  UserService.logoutUser();            
                   localStorage.setItem("loggedIn","true");                
                   /*$rootScope.user = {
                       email : $scope.user.email,
@@ -321,12 +322,13 @@ angular.module('durgaPuja.controllers', [])
                     $state.go('app.home');
                     $ionicLoading.hide();
                   }else{
+                    $ionicLoading.hide();
                   if(ionic.Platform.isWebView()){              
                     $cordovaDialogs.alert('Please check your credentials!', 'Login Failed', 'Ok')
                       .then(function() {
                         // callback success
                       });
-                    }else{
+                    }else{                      
                       $ionicPopup.alert({
                        title: 'Login Failed',
                        template: 'Please check your credentials!'
@@ -335,6 +337,7 @@ angular.module('durgaPuja.controllers', [])
                   }                                       
             }, function(error) {
               console.log(error);
+              $ionicLoading.hide();
                 $ionicPopup.alert({
                      title: 'Login Failed',
                      template: 'Could not authenticate your credentials'
@@ -362,7 +365,7 @@ angular.module('durgaPuja.controllers', [])
                 };*/
                 UserService.setUser({
                   email : $scope.user.email,
-                  name : "Surajit Sarkar"                
+                  name : $scope.user.name                
                 });
                 //localStorage.setItem("user",JSON.stringify($rootScope.user)); 
                 //finally, we route our app to the 'app.shop' view
@@ -375,6 +378,7 @@ angular.module('durgaPuja.controllers', [])
                 $state.go('app.home');
                 $ionicLoading.hide();
               }else{
+                $ionicLoading.hide();
                 $ionicPopup.alert({
                  title: 'Login Failed',
                  template: 'Please check your credentials!'
@@ -382,6 +386,7 @@ angular.module('durgaPuja.controllers', [])
               }                                        
         }, function(error) {
             console.log(error);
+            $ionicLoading.hide();
             $ionicPopup.alert({
                  title: 'Login Failed',
                  template: JSON.stringify(error)
